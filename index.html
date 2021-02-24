@@ -5,12 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zocra</title>
+
+    <style>
+      body {
+        max-width: 50em !important;
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura.css" type="text/css">
+
+
+
 </head>
 <body>
     
     <h1 class="nationFullName"></h1>
     <img class="flag" src=""></img>
 
+    <hr>
+
+    <ul>
+      <li>Leader: <span class="leaderName"></span></li>
+      <li>Capital City: <span class="capitalCity"></span></li>
+      <li>Religion: <span class="religion"></span></li>
+    </ul>
 
 <script>
     fetch("https://www.nationstates.net/cgi-bin/api.cgi?nation=zocra")
@@ -23,6 +41,9 @@
    // document.querySelector('.nationFullName').innerHTML = xml.documentElement.nodeName;
     document.querySelector('.nationFullName').innerHTML = xml.documentElement.childNodes[5].innerHTML;
     document.querySelector('.flag').src = xml.documentElement.childNodes[35].innerHTML;
+    document.querySelector('.leaderName').innerHTML = xml.documentElement.childNodes[59].innerHTML;
+    document.querySelector('.capitalCity').innerHTML = xml.documentElement.childNodes[61].innerHTML;
+    document.querySelector('.religion').innerHTML = xml.documentElement.childNodes[63].innerHTML;
   })
   .catch(console.error);
 
