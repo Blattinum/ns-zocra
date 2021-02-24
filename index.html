@@ -8,16 +8,17 @@
 </head>
 <body>
     
-
+    <h1 class="nationFullName"></h1>
 
 
 <script>
     fetch("https://www.nationstates.net/cgi-bin/api.cgi?nation=zocra")
   .then(response => response.text())
   .then(data => {
-    const parser = new DOMParser();
-    const xml = parser.parseFromString(data, "application/xml");
+    let parser = new DOMParser();
+    let xml = parser.parseFromString(data, "application/xml");
     console.log(xml);
+    document.querySelector('.nationFullName').innerHTML = xml;
   })
   .catch(console.error);
 
