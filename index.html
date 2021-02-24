@@ -78,6 +78,14 @@
     console.log(xml);
    // document.querySelector('.nationFullName').innerHTML = xml.documentElement.nodeName;
     document.querySelector('.nationFullName').innerHTML = xml.documentElement.childNodes[5].innerHTML;
+    
+    let foundedTime = xml.documentElement.childNodes[45].innerHTML;
+    let utcSeconds = foundedTime;
+    let fd = new Date(0); // The 0 there is the key, which sets the date to the epoch
+    fd.setUTCSeconds(utcSeconds);
+    
+    document.querySelector('.foundedTime').innerHTML = fd;
+
     document.querySelector('.flag').src = xml.documentElement.childNodes[35].innerHTML;
     document.querySelector('.leaderName').innerHTML = xml.documentElement.childNodes[59].innerHTML;
     document.querySelector('.capitalCity').innerHTML = xml.documentElement.childNodes[61].innerHTML;
