@@ -10,6 +10,12 @@
       body {
         max-width: 50em !important;
       }
+
+      .freedom-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
     </style>
 
     <link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura.css" type="text/css">
@@ -23,6 +29,12 @@
     <img class="flag" src=""></img>
 
     <hr>
+
+    <div class="freedom-bar">
+      <div class="civilRights"></div>
+      <div class="economy"></div>
+      <div class="politicalFreedom"></div>
+    </div>
 
     <h2>the deets</h2>
 
@@ -51,7 +63,9 @@
     document.querySelector('.leaderName').innerHTML = xml.documentElement.childNodes[59].innerHTML;
     document.querySelector('.capitalCity').innerHTML = xml.documentElement.childNodes[61].innerHTML;
     document.querySelector('.religion').innerHTML = xml.documentElement.childNodes[63].innerHTML;
-
+    document.querySelector('.civilRights').innerHTML = xml.documentElement.childNodes[17].childNodes[1].innerHTML;
+    document.querySelector('.economy').innerHTML = xml.documentElement.childNodes[17].childNodes[3].innerHTML;
+    document.querySelector('.politicalFreedom').innerHTML = xml.documentElement.childNodes[17].childNodes[5].innerHTML;
     document.querySelector('.lastSeen').innerHTML = xml.documentElement.childNodes[49].innerHTML;
   })
   .catch(console.error);
