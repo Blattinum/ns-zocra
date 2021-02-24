@@ -41,9 +41,9 @@
     <hr>
 
     <div class="freedom-bar">
-      <div class="civilRights"></div>
-      <div class="economy"></div>
-      <div class="politicalFreedom"></div>
+      <div class="civilRights">Civil Rights: </div>
+      <div class="economy">Economy: </div>
+      <div class="politicalFreedom">Political Freedom: </div>
     </div>
 
     <h2>the deets</h2>
@@ -73,9 +73,14 @@
     document.querySelector('.leaderName').innerHTML = xml.documentElement.childNodes[59].innerHTML;
     document.querySelector('.capitalCity').innerHTML = xml.documentElement.childNodes[61].innerHTML;
     document.querySelector('.religion').innerHTML = xml.documentElement.childNodes[63].innerHTML;
-    document.querySelector('.civilRights').innerHTML = xml.documentElement.childNodes[17].childNodes[1].innerHTML;
-    document.querySelector('.economy').innerHTML = xml.documentElement.childNodes[17].childNodes[3].innerHTML;
-    document.querySelector('.politicalFreedom').innerHTML = xml.documentElement.childNodes[17].childNodes[5].innerHTML;
+
+    let civilRights = xml.documentElement.childNodes[17].childNodes[1].innerHTML;
+    let economy = xml.documentElement.childNodes[17].childNodes[3].innerHTML;
+    let politicalFreedom = xml.documentElement.childNodes[17].childNodes[5].innerHTML;
+    document.querySelector('.civilRights').insertAdjacentHTML('beforeend', civilRights);
+    document.querySelector('.economy').insertAdjacentHTML('beforeend', economy);
+    document.querySelector('.politicalFreedom').insertAdjacentHTML('beforeend', politicalFreedom);
+
     document.querySelector('.lastSeen').innerHTML = xml.documentElement.childNodes[49].innerHTML;
   })
   .catch(console.error);
