@@ -9,6 +9,7 @@
 <body>
     
     <h1 class="nationFullName"></h1>
+    <img class="flag" src=""></img>
 
 
 <script>
@@ -21,6 +22,7 @@
     console.log(xml);
    // document.querySelector('.nationFullName').innerHTML = xml.documentElement.nodeName;
     document.querySelector('.nationFullName').innerHTML = xml.documentElement.childNodes[5].innerHTML;
+    document.querySelector('.flag').src = xml.documentElement.childNodes[35].innerHTML;
   })
   .catch(console.error);
 
