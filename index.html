@@ -154,6 +154,70 @@
     document.querySelector('.politicalFreedom').insertAdjacentHTML('beforeend', politicalFreedom);
 
     document.querySelector('.lastSeen').innerHTML = xml.documentElement.childNodes[49].innerHTML;
+
+    // CIVIL RIGHTS
+    if (civilRights == 'Excessive') {
+      document.querySelector('.civilRights').style.backgroundColor = "#2ccc21";
+    }
+
+    if (civilRights == 'World Benchmark') {
+      document.querySelector('.civilRights').style.backgroundColor = "#70b30c";
+    }
+
+    if (civilRights == 'Superb') {
+      document.querySelector('.civilRights').style.backgroundColor = "#698908";
+    }
+
+    if (civilRights == 'Excellent') {
+      document.querySelector('.civilRights').style.backgroundColor = "#697D08";  //697D08
+    }
+
+    if (civilRights == 'Very Good') {
+      document.querySelector('.civilRights').style.backgroundColor = "#696F08";
+    }
+
+    if (civilRights == 'Good') {
+      document.querySelector('.civilRights').style.backgroundColor = "#696408";
+    }
+
+    if (civilRights == 'Average') {
+      document.querySelector('.civilRights').style.backgroundColor = "#4F5008";
+    }
+
+    if (civilRights == 'Below Average') {
+      document.querySelector('.civilRights').style.backgroundColor = "#693708";
+    }
+
+    if (civilRights == 'Some') {
+      document.querySelector('.civilRights').style.backgroundColor = "#691F08";
+    }
+
+    if (civilRights == 'Few') {
+      document.querySelector('.civilRights').style.backgroundColor = "#69160B";
+    }
+
+    if (civilRights == 'Rare') {
+      document.querySelector('.civilRights').style.backgroundColor = "#690111";
+    }
+
+    if (civilRights == 'Unheard Of') {
+      document.querySelector('.civilRights').style.backgroundColor = "#80030E";
+    }
+
+    if (civilRights == 'Outlawed') {
+      document.querySelector('.civilRights').style.backgroundColor = "#59030a";
+    }
+
+    // ECONOMY 
+    if (economy == 'Frightening') {
+      document.querySelector('.economy').style.backgroundColor = "darkgreen";
+    }
+
+    // POLITICAL FREEDOM
+    if (politicalFreedom == 'Superb') {
+      document.querySelector('.politicalFreedom').style.backgroundColor = "green";
+    }
+
   })
   .catch(console.error);
 
