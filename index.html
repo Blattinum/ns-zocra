@@ -13,10 +13,24 @@
         box-sizing: border-box;
       }
 
-      
+      html {
+        font-size: 62.5%;
+      }
+
 
       body {
-        max-width: 50em !important;
+        background-color: #f5f5f5;
+        color: #2b2b2b;
+        font-size: 2.2rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .body-content {
+        max-width: 60%;
       }
 
       .freedom-bar {
@@ -56,6 +70,8 @@
 
 </head>
 <body>
+
+  <div class="body-content">
     
     <h1 class="nationFullName"></h1>
 
@@ -65,7 +81,6 @@
 
     <img class="flag" src="./loading.svg"></img>
 
-    <hr>
 
     <div class="freedom-bar">
       <div class="civilRights">Civil Rights: </div>
@@ -81,7 +96,8 @@
       <li>Religion: <span class="religion"></span></li>
     </ul>
 
-<hr>
+  </div>
+
     <footer>
       <code>Last seen: <span class="lastSeen"></span></code>
       <br><br>
