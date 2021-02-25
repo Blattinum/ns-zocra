@@ -19,7 +19,7 @@
 
 
       body {
-        background-color: #f5f5f5;
+        background-color: #fff;
         color: #2b2b2b;
         font-size: 2.8rem;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -124,7 +124,7 @@
     </footer>
 
 <script>
-    fetch("https://www.nationstates.net/cgi-bin/api.cgi?nation=zocra")
+    fetch("https://www.nationstates.net/cgi-bin/api.cgi?nation=delva")
   .then(response => response.text())
   .then(data => {
     let parser = new DOMParser();
@@ -155,7 +155,7 @@
 
     document.querySelector('.lastSeen').innerHTML = xml.documentElement.childNodes[49].innerHTML;
 
-    // CIVIL RIGHTS
+    // CIVIL RIGHTS  ####################################################
     if (civilRights == 'Excessive') {
       document.querySelector('.civilRights').style.backgroundColor = "#2ccc21";
     }
@@ -212,14 +212,122 @@
       document.querySelector('.civilRights').style.backgroundColor = "#59030a";
     }
 
-    // ECONOMY 
+    // ECONOMY  ####################################################
     if (economy == 'Frightening') {
-      document.querySelector('.economy').style.backgroundColor = "darkgreen";
+      document.querySelector('.economy').style.backgroundColor = "#2ccc21";
     }
 
-    // POLITICAL FREEDOM
+    if (economy == 'All-Consuming') {
+      document.querySelector('.economy').style.backgroundColor = "#70b30c";
+    }
+    
+    if (economy == 'Powerhouse') {
+      document.querySelector('.economy').style.backgroundColor = "#698908";
+    }
+
+    if (economy == 'Thriving') {
+      document.querySelector('.economy').style.backgroundColor = "#698908";
+    }
+
+    if (economy == 'Very Strong') {
+      document.querySelector('.economy').style.backgroundColor = "#697D08";  //697D08
+    }
+
+    if (economy == 'Strong') {
+      document.querySelector('.economy').style.backgroundColor = "#696F08";
+    }
+
+    if (economy == 'Good') {
+      document.querySelector('.economy').style.backgroundColor = "#696408";
+    }
+
+    if (economy == 'Reasonable') {
+      document.querySelector('.economy').style.backgroundColor = "#4F5008";
+    }
+
+    if (economy == 'Fair') {
+      document.querySelector('.economy').style.backgroundColor = "#503c08";
+    }
+
+    if (economy == 'Developing') {
+      document.querySelector('.economy').style.backgroundColor = "#691F08";
+    }
+
+    if (economy == 'Weak') {
+      document.querySelector('.economy').style.backgroundColor = "#69160B";
+    }
+
+    if (economy == 'Fragile') {
+      document.querySelector('.economy').style.backgroundColor = "#690111";
+    }
+
+    if (economy == 'Struggling') {
+      document.querySelector('.economy').style.backgroundColor = "#80030E";
+    }
+
+    if (economy == 'Basket Case') {
+      document.querySelector('.economy').style.backgroundColor = "#59030a";
+    }
+
+    if (economy == 'Imploded') {
+      document.querySelector('.economy').style.backgroundColor = "#300206";
+    }
+
+    // POLITICAL FREEDOM  ####################################################
+    if (politicalFreedom == 'Excessive') {
+      document.querySelector('.politicalFreedom').style.backgroundColor = "#2ccc21";
+    }
+
+    if (politicalFreedom == 'World Benchmark') {
+      document.querySelector('.politicalFreedom').style.backgroundColor = "#70b30c";
+    }
+    
+    if (politicalFreedom == 'Frightening') {
+      document.querySelector('.politicalFreedom').style.backgroundColor = "#698908";
+    }
+
     if (politicalFreedom == 'Superb') {
-      document.querySelector('.politicalFreedom').style.backgroundColor = "green";
+      document.querySelector('.politicalFreedom').style.backgroundColor = "#698908";
+    }
+
+    if (politicalFreedom == 'Excellent') {
+      document.querySelector('.politicalFreedom').style.backgroundColor = "#697D08";  //697D08
+    }
+
+    if (politicalFreedom == 'Very Good') {
+      document.querySelector('.politicalFreedom').style.backgroundColor = "#696F08";
+    }
+
+    if (politicalFreedom == 'Good') {
+      document.querySelector('.politicalFreedom').style.backgroundColor = "#696408";
+    }
+
+    if (politicalFreedom == 'Average') {
+      document.querySelector('.politicalFreedom').style.backgroundColor = "#4F5008";
+    }
+
+    if (politicalFreedom == 'Below Average') {
+      document.querySelector('.politicalFreedom').style.backgroundColor = "#693708";
+    }
+
+    if (politicalFreedom == 'Some') {
+      document.querySelector('.politicalFreedom').style.backgroundColor = "#691F08";
+    }
+
+    if (politicalFreedom == 'Few') {
+      document.querySelector('.politicalFreedom').style.backgroundColor = "#69160B";
+    }
+
+    if (politicalFreedom == 'Rare') {
+      document.querySelector('.politicalFreedom').style.backgroundColor = "#690111";
+    }
+
+    if (politicalFreedom == 'Unheard Of') {
+      document.querySelector('.politicalFreedom').style.backgroundColor = "#80030E";
+    }
+
+    if (politicalFreedom == 'Outlawed') {
+      document.querySelector('.politicalFreedom').style.backgroundColor = "#59030a";
     }
 
   })
