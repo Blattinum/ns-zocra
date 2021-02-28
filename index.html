@@ -82,7 +82,8 @@
 
     </style>
 
-   <!-- <link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura.css" type="text/css"> -->
+<script src="./assets/js/Chart.min.js"></script>
+<script src="./assets/js/utils.js"></script>
 
 
 
@@ -114,6 +115,13 @@
       <li>Capital City: <span class="capitalCity"></span></li>
       <li>Religion: <span class="religion"></span></li>
     </ul>
+<hr>
+
+<h1 class="govtAdmin"></h1>
+
+    <div id="canvas-holder" style="width:40%">
+      <canvas id="chart-area"></canvas>
+    </div>
 
   </div>
 
@@ -330,8 +338,58 @@
       document.querySelector('.politicalFreedom').style.backgroundColor = "#59030a";
     }
 
+    // PIE CHARTS DATA
+
+    var govtAdmin = xml.documentElement.childNodes[41].childNodes[1].innerHTML;
+    document.querySelector('.govtAdmin').innerHTML = govtAdmin;
+    var govtDef = xml.documentElement.childNodes[41].childNodes[3].innerHTML;
+
   })
   .catch(console.error);
+
+
+
+
+
+  // PIE CHART
+
+  var config = {
+			type: 'pie',
+			data: {
+				datasets: [{
+					data: [
+						20,
+						20,
+						20,
+						20,
+						20,
+					],
+					backgroundColor: [
+						window.chartColors.red,
+						window.chartColors.orange,
+						window.chartColors.yellow,
+						window.chartColors.green,
+						window.chartColors.blue,
+					],
+					label: 'Dataset 1'
+				}],
+				labels: [
+					'Red',
+					'Orange',
+					'Yellow',
+					'Green',
+					'Blue'
+				]
+			},
+			options: {
+				responsive: true
+			}
+		};
+
+		window.onload = function() {
+			var ctx = document.getElementById('chart-area').getContext('2d');
+			window.myPie = new Chart(ctx, config);
+		};
 
 </script>
 
