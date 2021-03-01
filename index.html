@@ -122,7 +122,8 @@
     <div id="canvas-holder" style="width:40%">
       <canvas id="chart-area"></canvas>
     </div>
-
+    <hr>
+    <span class="rss-feed"></span>
   </div>
 
     <footer>
@@ -141,6 +142,10 @@
     console.log(xml);
    // document.querySelector('.nationFullName').innerHTML = xml.documentElement.nodeName;
     document.querySelector('.nationFullName').innerHTML = xml.documentElement.childNodes[5].innerHTML;
+    let shortName = xml.documentElement.childNodes[1].innerHTML;
+    console.log(shortName);
+
+    document.querySelector('.rss-feed').insertAdjacentHTML('beforeend', "<script src=\"\/\/rss.bloople.net\/?url=https%3A%2F%2Fwww.nationstates.net%2Fcgi-bin%2Frss.cgi%3Fnation%3Dzocra&showtitle=false&type=js\"><\/script>");
     
     let foundedTime = xml.documentElement.childNodes[45].innerHTML;
     let utcSeconds = foundedTime;
