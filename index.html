@@ -118,6 +118,7 @@
       <li>Leader: <span class="leaderName"></span></li>
       <li>Capital City: <span class="capitalCity"></span></li>
       <li>Religion: <span class="religion"></span></li>
+      <li>Population (in <i>millions</i>): <span class="nationPop"></span></li>
     </ul>
 <hr>
 
@@ -163,6 +164,12 @@
     document.querySelector('.foundedTime').innerHTML = fd;
 
     document.querySelector('.flag').src = xml.documentElement.childNodes[35].innerHTML;
+
+    var nationPopCalc = xml.documentElement.childNodes[21].innerHTML;
+
+    // nationPopCalc = nationPopCalc.slice(0, -3);
+
+    document.querySelector('.nationPop').innerHTML = nationPopCalc;
     document.querySelector('.leaderName').innerHTML = xml.documentElement.childNodes[59].innerHTML;
     document.querySelector('.capitalCity').innerHTML = xml.documentElement.childNodes[61].innerHTML;
     document.querySelector('.religion').innerHTML = xml.documentElement.childNodes[63].innerHTML;
