@@ -116,6 +116,7 @@
 
     <ul>
       <li>Leader: <span class="leaderName"></span></li>
+      <li>Motto: <span class="motto"></span></li>
       <li>Capital City: <span class="capitalCity"></span></li>
       <li>Religion: <span class="religion"></span></li>
       <li>Population (in <i>millions</i>): <span class="nationPop"></span></li>
@@ -151,6 +152,9 @@
     console.log(xml);
    // document.querySelector('.nationFullName').innerHTML = xml.documentElement.nodeName;
     document.querySelector('.nationFullName').innerHTML = xml.documentElement.childNodes[5].innerHTML;
+
+    document.querySelector('.motto').innerHTML = xml.documentElement.childNodes[7].innerHTML;
+
     let shortName = xml.documentElement.childNodes[1].innerHTML;
     console.log(shortName);
 
