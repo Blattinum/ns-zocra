@@ -116,7 +116,7 @@
 
     <ul>
       <li>Leader: <span class="leaderName"></span></li>
-      <li><i>Motto: <span class="motto"></span></i></li>
+      <li>Motto: <i><span class="motto"></span></i></li>
       <li>Capital City: <span class="capitalCity"></span></li>
       <li>Religion: <span class="religion"></span></li>
       <li>Population (in <i>millions</i>): <span class="nationPop"></span></li>
@@ -141,7 +141,7 @@
 
 <script>
 
-    var nationName = 'zocra';
+    var nationName = 'zocra'; // zocra
 
     fetch("https://www.nationstates.net/cgi-bin/api.cgi?nation=" + nationName)
   .then(response => response.text())
